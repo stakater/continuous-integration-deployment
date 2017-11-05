@@ -25,7 +25,24 @@ high-availability strategies.
 - How upgrades to the production environment will be handled, including data migration?
 - How application support will be managed?
 
+Creating the strategy is of course just the beginning; it will be added to and changed as the project progresses.
+
+A vital component of the release strategy is the release plan describing how releases are performed.
+
 ### The Release Plan
+
+The first release is usually the one that carries the highest risk; it needs careful planning. The results of this planning may be automated scripts, documentation, or other procedures needed to reliably and repeatedly deploy the application into the production environment. In addition to the material in the release strategy, it should include: 
+
+- The steps required to deploy the application for the first time
+- How to smoke-test the application and any services it uses as part of the deployment process
+- The steps required to back out the deployment should it go wrong
+- The steps required to back up and restore the application’s state
+- The steps required to upgrade the application without destroying theapplication’s state
+- The steps to restart or redeploy the application should it fail
+- The location of the logs and a description of the information they contain
+- The methods of monitoring the application
+- The steps to perform any data migrations that are necessary as part of the release
+- An issue log of problems from previous deployments, and their solutions
 
 ## Deploying and Promoting Your Application
 
