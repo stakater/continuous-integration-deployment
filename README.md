@@ -1,6 +1,32 @@
 # continuous-delivery-deployment
 what is continuous delivery? what is continuous deployment? what is release strategy?
 
+## Creating a Release Strategy
+
+The most important part of creating a release strategy is for the application’s stakeholders to meet up during the project planning process. The point of their discussions should be working out a common understanding concerning the deployment and maintenance of the application throughout its lifecycle. This shared understanding is then captured as the release strategy. This document will be updated and maintained by the stakeholders throughout the application’s life. When creating the first version of your release strategy at the beginning of the project, you should consider including the following:
+
+- An asset and configuration management strategy.
+- A description of the technology used for deployment. This should be agreed upon by both the operations and development teams.
+- A plan for implementing the deployment pipeline.
+- An enumeration of the environments available for acceptance, capacity, integration, and user acceptance testing, and the process by which builds will be moved through these environments.
+- A description of the processes to be followed for deployment into testing and production environments, such as change requests to be opened and approvals that need to be granted.
+- Requirements for monitoring the application, including any APIs or services the application should use to notify the operations team of its state.
+- A discussion of the method by which the application’s deploy-time and runtime configuration will be managed, and how this relates to the automated deployment process.
+- Description of the integration with any external systems. At what stage and how are they tested as part of a release? How do the operations personnel communicate with the provider in the event of a problem?
+- Details of logging so that operations personnel can determine the application’s state and identify any error conditions.
+- A disaster recovery plan so that the application’s state can be recovered following a disaster.
+The service-level agreements for the software, which will determine
+whether the application will require techniques like failover and other
+high-availability strategies.
+- Production sizing and capacity planning: How much data will your live application create? How many log files or databases will you need? How much bandwidth and disk space will you need? What latency are clients expecting?
+- An archiving strategy so that production data that is no longer needed can be kept for auditing or support purposes.
+- How the initial deployment to production works?
+- How fixing defects and applying patches to the production environment will be handled?
+- How upgrades to the production environment will be handled, including data migration?
+- How application support will be managed?
+
+### The Release Plan
+
 ## Deploying and Promoting Your Application
 
 The key to deploying any application in a reliable, consistent manner is constant practice: Use the same process to deploy to every environment, including production.
