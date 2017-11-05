@@ -1,7 +1,11 @@
 # continuous-delivery-deployment
 what is continuous delivery? what is continuous deployment? what is release strategy?
 
-## Modeling Your Release Process and Promoting Builds
+## Deploying and Promoting Your Application
+
+The key to deploying any application in a reliable, consistent manner is constant practice: Use the same process to deploy to every environment, including production.
+
+### Modeling Your Release Process and Promoting Builds
 
 In particular, it is important to capture:
 
