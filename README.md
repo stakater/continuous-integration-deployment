@@ -82,9 +82,11 @@ In particular, it is important to capture:
 
 - What stages a build has to go through in order to be released (for example, integration testing, QA acceptance testing, user acceptance testing, staging, production)
 - What the required gates or approval are
-- For each gate, who has the authority to approve a build passing throughthat gate
+- For each gate, who has the authority to approve a build passing through that gate
 
 At the end of this exercise, you might end up with a diagram similar to this:
+
+![TRP](img/test-release-process.png)
 
 Once you’ve created this diagram, you can create placeholders for each part of your release process in the tool you use for managing deployments. Once this is done, it should be possible for the people responsible for approvals to approve, using your tool, a particular build moving through a gate in the release process.
 
@@ -106,6 +108,10 @@ Perhaps most importantly, continuous deployment forces you to do the right thing
 
 1. CI - Jenkins
 2. CD - Spinnaker
+
+## Images
+
+![JS](img/jenkins-spinnaker.png)
 
 ## References
 
