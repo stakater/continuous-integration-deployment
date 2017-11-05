@@ -102,6 +102,11 @@ Perhaps most importantly, continuous deployment forces you to do the right thing
 
 > So what magic happens in our test suite that allows us to skip having a manual Quality Assurance step in our deploy process? The magic is in the scope, scale and thoroughness. It’s a thousand test files and counting. 4.4 machine hours of automated tests to be exact. Over an hour of these tests are instances of Internet Explorer automatically clicking through use cases and asserting on behaviour, thanks to Selenium. The rest of the time is spent running unit tests that poke at classes and functions and running functional tests that make web requests and assert on results.
 
+## Tools
+
+1. CI - Jenkins
+2. CD - Spinnaker
+
 ## References
 
 - [Continuous Delivery Book](...)
