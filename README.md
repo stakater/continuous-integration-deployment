@@ -113,6 +113,8 @@ Perhaps most importantly, continuous deployment forces you to do the right thing
 
 ![JS](img/jenkins-spinnaker.png)
 
+![SW](img/spinnaker-workflow.png)
+
 ## References
 
 - [Continuous Delivery Book](...)
