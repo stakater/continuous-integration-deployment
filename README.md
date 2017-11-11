@@ -1,5 +1,6 @@
 # continuous-delivery-deployment
-what is continuous delivery? what is continuous deployment? what is release strategy?
+
+what is continuous integration? what is continuous delivery? what is continuous deployment? what is release strategy?
 
 ## Deployment Pipeline Practices
 
@@ -76,6 +77,8 @@ The first release is usually the one that carries the highest risk; it needs car
 
 The key to deploying any application in a reliable, consistent manner is constant practice: Use the same process to deploy to every environment, including production.
 
+- Promotion Pipelines
+
 ### Modeling Your Release Process and Promoting Builds
 
 In particular, it is important to capture:
@@ -108,6 +111,16 @@ Perhaps most importantly, continuous deployment forces you to do the right thing
 
 1. CI - Jenkins
 2. CD - Spinnaker
+
+### Spinnaker
+
+#### What is Spinnaker?
+
+Spinnaker is a solution for supporting CD (Continuous Deployment) operations for software engineering teams. Developed originally by Netflix, it enabled teams to deploy software to multiple environments such as AWS, Google Cloud Platform, OpenStack and Kubernetes. 
+
+[How Spinnaker maps resources to Kubernetes](https://blog.spinnaker.io/lifting-the-sail-how-spinnaker-maps-resources-to-kubernetes-57da9c1657ba)
+
+Kubernetes isn’t always enough to give you a fully automated deployment flow from code to production in containers, especially in large companies with complicated deployment pipeline needs. Spinnaker fills this gap by allowing for orchestration of multiple steps through defining sophisticated stages within deployment pipelines and taking a macro-management approach of looking at all of your deployments. Spinnaker enables sophisticated cloud deployment strategies while being customizable for all sorts of workflows.
 
 ## Images
 
