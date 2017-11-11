@@ -115,6 +115,10 @@ Perhaps most importantly, continuous deployment forces you to do the right thing
 
 ![SW](img/spinnaker-workflow.png)
 
+![Pipelines](img/pipelines.png)
+
+![Deployment Strategies](img/deployment-strategies.png)
+
 ## References
 
 - [Continuous Delivery Book](...)
