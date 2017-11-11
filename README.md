@@ -128,7 +128,11 @@ Kubernetes isn’t always enough to give you a fully automated deployment flow f
 
 ![SW](img/spinnaker-workflow.png)
 
+### Pipelines
+
 ![Pipelines](img/pipelines.png)
+
+### Deployment Strategies
 
 ![Deployment Strategies](img/deployment-strategies.png)
 
