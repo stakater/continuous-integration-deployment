@@ -2,6 +2,8 @@
 
 what is continuous integration? what is continuous delivery? what is continuous deployment? what is release strategy?
 
+Continuous integration is a practice, not a tool, and it depends upon discipline to make it effective. 
+
 ## Deployment Pipeline Practices
 
 1. Only Build Your Binaries Once
