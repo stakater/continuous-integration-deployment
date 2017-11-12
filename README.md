@@ -2,7 +2,7 @@
 
 what is continuous integration? what is continuous delivery? what is continuous deployment? what is release strategy?
 
-Continuous integration is a practice, not a tool, and it depends upon discipline to make it effective. 
+Continuous integration is a practice, not a tool, and it depends upon discipline to make it effective. The objective of our CI system is to ensure that our software is working, in essence, all of the time. In order to ensure that this is the case, here are the prac- tices that we enforce on our teams. 
 
 ## Deployment Pipeline Practices
 
