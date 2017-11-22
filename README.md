@@ -4,6 +4,100 @@ what is continuous integration? what is continuous delivery? what is continuous 
 
 Continuous integration is a practice, not a tool, and it depends upon discipline to make it effective. The objective of our CI system is to ensure that our software is working, in essence, all of the time. In order to ensure that this is the case, here are the prac- tices that we enforce on our teams. 
 
+## DevOps
+
+DevOps is concerned with aligning the constituents in the software delivery process to a common goal of value delivery—and 
+it’s not just Developers and Operators, but InfoSec and Quality Assurance functions and more. Recognize that wealth is created 
+when the work product is valued by actors external to the production system. Value delivery outcomes are measured by metrics 
+tied to production delivery velocity, quality, and waste. DevOps emphasizes behavioral- or cultural-related changes such as
+those which encourage teaming, inclusion, feedback, and experimentation. Technological interventions such as automation 
+are central as they can reinforce such target behaviors. DevOps does not necessarily imply functional roles in software delivery 
+such as development, quality assurance, or operations are merged or seconded. More important is that a professional respect and 
+shared sensibility is formed across the delivery team.
+
+## Containers
+
+Containers are the runtime representation of a packaging format based on a light-weight, immutable image. Runtime dependencies 
+are resolved within the image which facilitates portability. This makes possible the agreement on a standardized software 
+work product. Management and runtime tooling that is container aware can then be applied consistently no matter what the 
+underlying technology stack. Container-based workloads are suitable for multi-tenancy on a single compute instance and when 
+implemented securely can realize significant operation efficiencies. An important corollary is that launching a new workload does not incur the cost
+of provisioning new compute infrastructure. This enables a true on-demand, self service experience for users.
+
+## Container Orchestration
+
+Container orchestration involves the lifecycle management of container workloads, including functions such as to schedule, 
+stop, start, and replicate across a cluster of machines. Compute resources for running workloads are abstracted, allowing the
+host infrastructure to be treated as a single logical deployment target. Kubernetes is an open source community project 
+addressing container orchestration. It groups containers that make up an application into logical units for easy management and
+discovery, and features self-healing, service discovery, load balancing, and storage services among its rich feature set. 
+Orchestration plays a critical role in our design goal of application-centricity as quality of service attributes and deployment patterns
+are executed by invoking Kubernetes API primitives.
+
+## Continuous Integration
+
+Continuous integration (CI) concerns the integration of code from potentially multiple authors into a shared source code 
+management (SCM) repository. Such check-ins could occur many times a day, and automation steps in such a process could 
+include gates or controls to expose any issues as early as possible. SCMs such as Git include workflow support to commit 
+to trunk, push, and merge code pull requests from multiple developers. With containers, a Git push event could be configured to
+then trigger an image build event via the webhooks mechanism.
+
+## Continuous Delivery
+
+Once a CI strategy is in place, consideration can then move to achieving continuous delivery (CD). This involves automating 
+the steps required to promote the work product from one environment to the next within the defined software development
+lifecycle (SDLC). Such steps could include automated testing, smoke, unit, functional, and static code analysis and static 
+dependency checks for known security vulnerabilities. With containers, promotion in later stages of the SLC may merely involve the
+tagging of the (immutable) image to mark acceptance. Binary promotions are also possible such that only the image is 
+pushed (to the target registry of the new environment), leaving source code in situ.
+
+## Continuous Deployment
+
+By convention, we can denote the special case of automated continuous delivery to production as continuous deployment (CD). 
+We make such a distinction because such deployments may be subject to additional governance processes and gates—for 
+example, deliberate human intervention to manage risk and complete sign-off procedures. We make such a distinction because 
+such deployments may be subject to additional governance processes. As per Figure 1-1, there may be scenarios for deliberate 
+human intervention to manage risk and complete sign-off procedures.
+
+![CI vs CD vs CD](img/CI-CD-CD.png)
+
+## Pipelines
+
+Pipelines are a representation of the flow/automation in a CI/CD process. Typically a pipeline might call out discrete 
+steps in the software delivery process and present them visually or via a high-level scripting language so the flow can 
+be manipulated.
+The steps might include build, unit tests, acceptance tests, packaging, documentation, reporting, and deployment and 
+verification phases. Well-designed pipelines help deliver better quality code faster by enabling participants in the 
+software delivery process to more easily diagnose and respond to feedback. As illustrated in Figure 1-2, diagnosis and 
+response turnaround can be accelerated by organizing releases into smaller and more frequent release bundles.
+
+## Software Configuration Management
+
+For our purposes we will take a narrower view of software configuration management (CM) and focus on the recommended 
+software engineering practice of separating dynamic configuration from static runtime software. Doing so allows developers 
+and operations engineers to change the configuration without having to rebuild the runtime such as might occur when 
+deploying to different environments. Containers, based as they are on immutable images, amplify this behavior as the 
+alternative would be configuration layered across multiple images for each deployment scenario.
+
+## Deployment Patterns
+
+Aligned with the goal of automation across all steps in the software delivery lifecycle are patterns for deployment. 
+We look here for strategies that can balance across criteria including safety, testability, reversibility, and downtime 
+minimization in cloudscale scenarios. Some deployment patterns also offer opportunities for capturing and responding to 
+feedback. An A/B deployment allows for testing a user-defined hypothesis such as whether application version A is more 
+effective than B. Usage results can then drive weighted load balancing across the alternatives. Automation of deployment 
+strategies in this DevOps world are implemented by driving the orchestration APIs.
+
+## Continuous Improvement
+
+Let’s conclude this chapter by covering continuous improvement which should be the thread that connects all of the 
+process improvement–related practices summarized. The environment changes and so must we. These practices make it easy
+and inexpensive to experiment, formulate, and test hypotheses, as well as capture, act on, and experiment with the 
+feedback received. This way we can continue to inject energy into the system and so maintain a state of dynamic 
+stability—a balance of adaptive/agile versus fixed/stable.
+
+![CI](img/continuous-improvement.png)
+
 ## Deployment Pipeline Practices
 
 1. Only Build Your Binaries Once
@@ -143,3 +237,4 @@ Kubernetes isn’t always enough to give you a fully automated deployment flow f
 - [Continuous Delivery Book](...)
 - [Continuous Deployment by Timothy](http://timothyfitz.com/2009/02/08/continuous-deployment/)
 - [Continuous Deployment at IMVU: Doing the impossible fifty times a day.](http://timothyfitz.com/2009/02/10/continuous-deployment-at-imvu-doing-the-impossible-fifty-times-a-day/)
+- [DevOps with OpenShift](https://openshift-com.s3.amazonaws.com/ebooks/DevOps_with_OpenShift.pdf)
